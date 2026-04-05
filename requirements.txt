@@ -1,0 +1,6 @@
+streamlit
+nltk
+pandas
+matplotlib
+reportlab
+openai
