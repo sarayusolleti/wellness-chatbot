@@ -1,6 +1,17 @@
+import nltk
+
+# Download VADER lexicon safely
+try:
+    nltk.data.find('sentiment/vader_lexicon')
+except LookupError:
+    nltk.download('vader_lexicon')
+
+
+
+
 import streamlit as st
 import sqlite3
-from nltk.sentiment import SentimentIntensityAnalyzer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
 import random
